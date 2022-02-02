@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/js/griza.base.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/css/penli.css" integrity="sha384-7g0/efyrHKhHd4fpNcPfU698cG0Od+1MredmVZ2anqBQf/QA3gkvapp1CuOLARvY" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/griza.base.css">
+        <link rel="stylesheet" href="assets/css/griza.css">
+        <title>Document</title>
+    </head>
+
+    <body class="bg-dark">
+        <div class="w-flex flex-column h-100">
+            <div class="w-flex bg-dark-50 text-white p-1 w-100" style="z-index: 1500; height: 43px; max-height: 43px;">
+                <div class="me-5 fw-bold fs-6">
+                    GRIZA
+                </div>
+                <div class="w-flex jusify-content-start gx-3">
+                    <div>
+                        <button class="tag tag-sm tag-ghost" style="border: none; font-size: .8em;">file</button>
+                    </div>
+                    <div>
+                        <button class="tag tag-sm tag-ghost" style="border: none; font-size: .8em;">properties</button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-flex main w-100 bg-light main g-3">
+
+                <aside class="side-bar built-in hide bg-dark-75 p-3" data-side-bar="left">
+                    <div class="w-flex flex-column align-items-stretch justify-content-start gy-5 text-center">
+                        <div class="start">
+                            <a href="#" id="pointer" griza-group="tool" draggable="false">
+                                <i class="fas fa-mouse-pointer"></i>
+                                <span class="hiding">
+                                    pointer
+                                </span>
+                            </a>
+                        </div>
+                        <div class="start">
+                            <a href="#" id="pen" griza-group="tool" draggable="false">
+                                <i class="fas fa-pencil-alt"></i>
+                                <span class="hiding">
+                                    pen
+                                </span>
+                            </a>
+                        </div>
+                        <div class="start">
+                            <a href="#" id="move" griza-group="tool" draggable="false">
+                                <i class="far fa-hand-paper"></i>
+                                <span class="hiding">
+                                    move
+                                </span>
+                            </a>
+                        </div>
+                        <div class="start">
+                            <a href="#" id="tools" griza-group="tool" draggable="false">
+                                <i class="fas fa-tools"></i>
+                                <span class="hiding">
+                                    tools
+                                </span>
+                            </a>
+                        </div>
+                        <div class="start">
+                            <a href="#" id="magnet" griza-group="tool" draggable="false">
+                                <i class="fas fa-magnet"></i>
+                                <span class="hiding">
+                                    magnet
+                                </span>
+                            </a>
+                        </div>
+                        <div class="start">
+
+                        </div>
+                    </div>
+
+                    <div id="leftSideBtn" class="position-absolute top-50 start-100 position-middle" style="cursor: pointer">
+                        <button class="text-white bg-dark-75 rounded-end py-1" style="border: none;">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                </aside>
+
+                <main>
+                    <svg class="griza-pannel">
+                        <path id="gz-0" style="stroke:rgb(167, 205, 61);
+                        fill:transparent;
+                        stroke-width:1px;" d="M 96 52 L 96 53  96 54  95 55  95 56  95 57  94 58  94 59  94 60  93 60  93 61  93 62  93 63  92 64  91 65  91 66  91 67  91 68  90 68  90 69  90 71  89 71  89 72  89 73  88 74  88 75  88 76  87 77  87 79  86 80  86 81  85 81  84 81  84 82  84 83  84 84  84 85  84 86  84 87  84 88  84 89  84 90  84 91  85 91  85 92  86 92  86 93  86 94  87 94  88 94  89 94  90 94  91 94  92 94  93 94  94 94  95 93  96 93  96 92  97 91  98 91  98 90  99 90  100 89  101 88  101 87  102 87  102 86  103 86  103 85  104 84  105 84  105 83  105 82  106 82  107 82  107 81  108 81  109 80  110 80  111 80  112 80  113 80  114 79  115 79  115 78  116 78  117 78  118 78  119 78  120 78  120 77  120 76  121 76  122 76  125 76  125 75  126 75  127 74  128 74  129 74  130 74  131 74  132 74  133 74  134 74  135 74  136 74  136 75  136 76  136 77  136 78  136 79  136 80  136 81  136 82  136 83  136 84  136 85  136 86  136 87  135 88  135 89  135 90  135 91  135 92  134 92  134 93  134 94  134 95  134 96  134 97  134 98  134 99  134 100  134 101  134 102  134 103  134 104  135 104  135 105  136 105  137 105  138 105  138 106  139 106  140 106  141 106  142 106  143 106  144 106  145 106  146 106  147 106  148 106  148 105  148 104  149 104  150 104  150 103  151 103  152 102  153 102  154 102  155 102  155 101  156 101  157 101  157 100  158 100  159 100  160 100  160 99  161 99  161 98  162 98  162 97  163 97  163 96  164 96  164 95 " griza-process="selecting">
+                        </path>
+                    </svg>
+                </main>
+
+                <aside class="side-bar side-bar-size-2 bg-dark-75 p-3" data-side-bar="right">
+                    <div class="tool-box">
+                        <div class="tool-title">
+                            draw tools
+                        </div>
+                        <div class="tool-body">
+                            <span class="tool-icon-circle"></span>
+                            <span class="tool-icon-rectangle"></span>
+                        </div>
+                    </div>
+                    <div class="tool-box">
+                        <div class="tool-title">
+                            Color
+                        </div>
+                        <div class="tool-body">
+                            <div class="tool-color-picker">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-box">
+                        <div class="tool-title">
+                            Layer
+                        </div>
+                        <div class="tool-body">
+                            <div class="tool-layer">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="footer bg-dark-50 text-white w-100 p-3" style="z-index: 1500;">
+                footer
+            </div>
+        </div>
+        <script src="assets/js/griza.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/kkn1125/penli@vv011/docs/assets/js/penli.js" integrity="sha384-bOlrIoinKrqWcJ4ljPpn6qhrNhx9Yjs450HtZQSygtC/MFzf9I9uFxBPF9WUWXdm" crossorigin="anonymous"></script>
+    </body>
+
+</html>
